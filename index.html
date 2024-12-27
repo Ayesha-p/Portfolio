@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('YOUR_PUBLIC_KEY');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#container">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skillcontainer">Skills and Experties</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row" id="container">
+<p class="col-sm" id="myname">Hello , I'm Hafiza Madiha.</p> 
+<p class="col-sm" id="mydes">I'm a Graphic Designer</p> 
+<img id="homeimg" src="image\home.jfif" alt="New York">
+</div>
+
+
+<div id="aboutcontainer">
+
+<div id="about">
+<h2> Aboutus </h2>
+Hello, I'm Hafiza Madiha, graduated with a Bachelor's degree in
+Home Economics with a specialization in Apparel and Textile. During
+my studies, I developed a keen interest in creative textile design,
+particularly in pattern making and surface pattern design using
+photoshop. As an intern, I had the opportunity to work on a range of
+projects, from designing prints for textiles to creating unique digital
+prints for clothing. I'm passionate about creativity and enjoy exploring
+new ideas.
+I'm looking to develop my skills further and grow in my career. I'm
+seeking opportunities that will allow me to learn from experienced
+professionals, work on challenging projects, and contribute my own
+unique perspective. I'm excited about the potential to work with
+others who share my passion for creativity and design.
+I'm a quick learner and thrive in collaborative environments. If you're
+interested in connecting or learning more about my work, please feel
+free to contact me</div>  
+<img id="aboutmeimg" class="rounded-circle" src="image\aboutme.jpg" alt="New York">
+</div>
+
+ 
+
+<div id="skillcontainer">
+<div id="skill"> 
+<h2> Skills and Experties </h2>
+<br>Adobe Photoshop.
+ <div class="progress" style = "width:40%;margin-top:2%">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <span class="sr-only">50% Complete</span>
+  </div>
+</div>
+
+<br>Digital Illustration.
+<div class="progress" style = "width:40%; margin-top:2%">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <span class="sr-only">70% Complete</span>
+  </div>
+</div>
+
+<br> Digital Printing. 
+<div class="progress" style = "width:40%; margin-top:2%">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <span class="sr-only">70% Complete</span>
+  </div>
+</div>
+
+<br>Digital designing.
+<div class="progress"  style = "width:40%; margin-top:2%"">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:90%">
+    <span class="sr-only">70% Complete</span>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Gallery -->
+
+<div   style="padding:5%;width:100%" class="row">
+<h2> My Work </h2><br><br>
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="image/brochuref.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+
+    <img
+      src="image/brochure.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Wintry Mountain Landscape"
+    />
+  <img
+      src="image/airpods.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="image/buntinga.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
+   <img
+      src="image/fooddelivery.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+    <img
+      src="image/buntingb.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="image/flyerback.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+   <img
+      src="image/handbag.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+
+    <img
+      src="image/envolop.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+  </div>
+</div>
+<!-- Gallery -->
+
+<!--Section: Contact v.2-->
+<div id="contact3" class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p  class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div  class="col-md-9 mb-md-0 mb-5">
+            <form   id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+ <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Muhammad Mustafa Colony<br> sec# 11 1/2 street
+                        # 03 house no. 904 Karachi</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+92  300 0147919</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>syedamadihanoman@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+    
+        </div>
+        <!--Grid column-->
+
+
+
+<!--Section: Contact v.2-->
+    </div>
+
+</div>
+<!--Section: Contact v.2-->
+
+<footer class="bg-light text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+    <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.facebook.com/xofftie"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+    
+    
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/in/hafiza-madiha-57aaa6279/"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+    
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
+</html>
